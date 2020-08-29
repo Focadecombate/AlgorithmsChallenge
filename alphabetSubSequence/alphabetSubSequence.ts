@@ -1,4 +1,16 @@
 function alphabetSubsequence(s: string): boolean {
+    let charArray = [...s];
+
+    for (let i = 0; i < charArray.length - 1; i++) {
+        if (charArray[i].charCodeAt(0) === charArray[i + 1].charCodeAt(0)) {
+            return false
+        }
+        if (charArray[i].charCodeAt(0) > charArray[i + 1].charCodeAt(0)) {
+            return false
+        }
+    }
+
+    return true;
 
 }
 
